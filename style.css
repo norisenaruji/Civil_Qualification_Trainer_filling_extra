@@ -1,20 +1,19 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100vh;
   font-family: sans-serif;
   background-color: #f0f0f0;
 }
 
 #button-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   text-align: center;
   display: flex;
+  justify-content: center;
   gap: 10px;
-  align-items: flex-start; /* 上揃えに変更 */
+  align-items: flex-start;
+  margin: 20px auto;
 }
 
 .button-group {
@@ -39,26 +38,24 @@ button {
 }
 
 #prevButton {
-  background-color: #dc3545; /* 赤 */
+  background-color: #dc3545;
 }
 
 #displayButton {
-  background-color: #28a745; /* 緑 */
+  background-color: #28a745;
 }
 
 #nextButton {
-  background-color: #007bff; /* 青 */
+  background-color: #007bff;
 }
 
 .sub-button {
   background-color: white;
   color: black;
   border: 1px solid #ccc;
-
   font-size: clamp(16px, 4vw, 24px);
   width: clamp(120px, 20vw, 200px);
   height: clamp(48px, 6vh, 64px);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,14 +64,11 @@ button {
   white-space: nowrap;
 }
 
-
-
 #output {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0;
-  padding: 10px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 10px 10px;
 }
 
 .japanese, .english {
